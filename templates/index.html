@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meteo Calmit</title>
+
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#111827">
+
+    <link rel="stylesheet" href="/static/style.css?v=1.0.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>🌦 Meteo Calmit</h1>
+
+    <div id="status" class="status offline">🔴 OFFLINE</div>
+
+    <div class="last-update">
+        Posledná aktualizácia:
+        <span id="last_update">--</span>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="label">🌡 Teplota</div>
+            <div class="value" id="temperature">-- °C</div>
+        </div>
+
+        <div class="card">
+            <div class="label">💧 Vlhkosť</div>
+            <div class="value" id="humidity">-- %</div>
+        </div>
+
+        <div class="card">
+            <div class="label">📈 Tlak</div>
+            <div class="value" id="pressure">-- hPa</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🌬 Rýchlosť vetra</div>
+            <div class="value" id="wind_speed">-- m/s</div>
+        </div>
+
+        <div class="card">
+            <div class="label">💨 Náraz vetra</div>
+            <div class="value" id="wind_gust">-- m/s</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🧭 Smer vetra</div>
+            <div class="value" id="wind_direction">-- °</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🌫 Rosný bod</div>
+            <div class="value" id="dew_point">-- °C</div>
+        </div>
+
+        <div class="card">
+            <div class="label">☀️ Solárne žiarenie</div>
+            <div class="value" id="solar_radiation">-- W/m²</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🌤 UV index</div>
+            <div class="value" id="uv_index">--</div>
+        </div>
+    </div>
+
+    <h2>📊 Dnes</h2>
+
+    <div class="grid">
+        <div class="card">
+            <div class="label">🌡 Min teplota</div>
+            <div class="value" id="temperature_min">-- °C</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🌡 Max teplota</div>
+            <div class="value" id="temperature_max">-- °C</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🌬 Max vietor</div>
+            <div class="value" id="wind_speed_max">-- m/s</div>
+        </div>
+
+        <div class="card">
+            <div class="label">💨 Max náraz</div>
+            <div class="value" id="wind_gust_max">-- m/s</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🌤 Max UV</div>
+            <div class="value" id="uv_max">--</div>
+        </div>
+
+        <div class="card">
+            <div class="label">🧾 Záznamov dnes</div>
+            <div class="value" id="records_today">--</div>
+        </div>
+    </div>
+
+    <h2>🌡 Teplota za posledných 24 hodín</h2>
+    <canvas id="temperatureChart"></canvas>
+
+</div>
+
+<script src="/static/app.js?v=1.0.0"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    background: #111827;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 560px;
+    margin: auto;
+    padding: 18px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 24px;
+}
+
+.status {
+    text-align: center;
+    padding: 12px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.online {
+    background: #166534;
+}
+
+.offline {
+    background: #991b1b;
+}
+
+.last-update {
+    text-align: center;
+    opacity: 0.85;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.card {
+    background: #1f2937;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.label {
+    opacity: 0.75;
+    font-size: 15px;
+}
+
+.value {
+    font-size: 31px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+canvas {
+    background: #1f2937;
+    border-radius: 16px;
+    padding: 10px;
+}
